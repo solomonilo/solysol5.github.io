@@ -1,87 +1,100 @@
 <!DOCTYPE HTML>
-<html>
-	<head>
-		<title>W. Michael Conturo Architecture</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-	</head>
-	<body id="top">
+<html lang="en">
+    <head>
+        <title>W. Michael Conturo Architecture</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <style>
+            .main{
+                margin-top: 5%;
+            }
+            table.rotate-table-grid{
+                box-sizing: border-box;
+                border-collapse: collapse;
+            }
+            .rotate-table-grid tr, .rotate-table-grid td, .rotate-table-grid th {
+                border: 1px solid #111;
+                position: relative;
+                padding: 20px 30px;
+            }
+            .rotate-table-grid th span {
+                transform-origin: 0 50%;
+                transform: rotate(-90deg); 
+                white-space: nowrap; 
+                display: block;
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container main">
+            <div class="row">
+                <div class="col-md-4">
+                    <strong>W. Michael Conturo Architect</strong><br/>
+                    Highland Park<br/>
+                    Pittsburgh, Pa 15206<br/>
+                    (412) 363 - 1885
+                </div>
+                
+                <div class="col-md-6 offset-md-2">
+                    In private practice as a<br/> sole-propieter since 1995<br/><br/>
+        
+                    <h4>Representative Projects</h4>
+                    <div class="row">
+                        <div class="col-sm-1">
+                            <table class="rotate-table-grid">
+                                <thead>
+                                    <tr>
+                                        <th><span>Commercial<br/> Projects</span></th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div><!-- ./col-sm-1 -->
+                        <div class="col-sm-6 text-left">
+                            <div class="container" style="padding-top: 15px;">
+                                <ol>
+                                    <li>
+                                        <a href="projects/project_1/index.html">
+                                            <b>Project 1</b>
+                                        </a>
+                                    </li>
+                                </ol>
+                            </div><!-- ./container -->
+                        </div><!-- ./col-sm-6 -->
+                    </div><!-- ./row -->
 
-		<!-- Header -->
-			<header id="header">
-				<div class="inner">
-					<!-- <a href="#" class="image avatar"><img src="images/avatar.jpg" alt="" /></a> -->
-					<h1><strong>W. Michael Conturo</strong> Architect</h1><br />
-					Highland Park<br />
-					Pittsburgh, Pa 15206<br /> 
-					<a href="mailtomikeconturo@gmail.com">mikeconturo@gmail.com</a><br /> 
-					<a href="tel:4123631885">(412) 363 1885</a>
-				</div>
-			</header>
+                    <div class="row">
+                        <div class="col-sm-1">
+                            <table class="rotate-table-grid">
+                                <thead>
+                                    <tr>
+                                        <th><span>Residential<br/> Projects</span></th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div><!-- ./col-sm-1 -->
+                        <div class="col-sm-6 text-left">
+                            <div class="container" style="padding-top: 15px;">
+                            </div><!-- ./container -->
+                        </div><!-- ./col-sm-6 -->
+                    </div><!-- ./row -->
+                </div>
+            </div><!-- ./row -->
+        </div><!-- ./container -->
 
-		<!-- Main -->
-			<div id="main">
+        <script>
+            $(function() {
+                var header_height = 0;
+                $('.rotate-table-grid th span').each(function() {
+                    if ($(this).outerWidth() > header_height) header_height = $(this).outerWidth();
+                });
 
-				<!-- One -->
-					<section id="one">
-						<header class="major">
-							<h2>About Me</h2>
-						</header>
-						<p>In private practice as a sole proprietor since 1995.</p>
-						<!-- <ul class="actions">
-							<li><a href="#" class="button">Learn More</a></li>
-						</ul> -->
-					</section>
+                $('.rotate-table-grid th').height(header_height);
+            });
+        </script>
 
-				<!-- Two -->
-					<section id="two">
-						<h2>Representative Projects</h2>
-						<div class="row">
-							<article class="6u 12u$(xsmall) work-item">
-								<a href="./projects/project_1/exterior_1.JPG" class="image fit thumb"><img src="./projects/project_1/exterior_1.JPG" alt="" /></a>
-								<h3>Commercial Projects</h3>
-								<p>
-									<ul>
-										<li>
-											<a href="projects/project_1/index.html">Project 1</a>
-										</li>
-									</ul>
-								</p>
-							</article>
-							<article class="6u$ 12u$(xsmall) work-item">
-								<a href="./images/fulls/02.jpg" class="image fit thumb"><img src="./images/fulls/02.jpg" alt="" /></a>
-								<h3>Residential Projects</h3>
-								<p>( Coming Soon )</p>
-							</article>
-						</div>
-						<!-- <ul class="actions">
-							<li><a href="#" class="button">Full Portfolio</a></li>
-						</ul> -->
-					</section>
-			</div>
-
-		<!-- Footer -->
-			<footer id="footer">
-				<div class="inner">
-					<ul class="icons">
-						<li><a href="mailto:mikeconturo@gmail.com" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
-					</ul>
-					<ul class="copyright">
-						<li>&copy; 2017 W. Michael Conturo Architecture</li>
-					</ul>
-				</div>
-			</footer>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.poptrox.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-			<script src="assets/js/main.js"></script>
-
-	</body>
+    </body>
 </html>
